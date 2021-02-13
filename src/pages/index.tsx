@@ -1,7 +1,13 @@
+import Header from '../components/HomePage/Header'
+import MainContent from '../components/HomePage/MainContent'
+import Footer from '../components/HomePage/Footer'
+
 export default function Home() {
   return (
-    <div>
-      <h1>Hello World!</h1>
-    </div>
+    <>
+      <Header />
+      <MainContent />
+      <Footer />
+    </>
   )
 }
