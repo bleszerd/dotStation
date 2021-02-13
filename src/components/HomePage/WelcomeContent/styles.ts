@@ -2,43 +2,31 @@ import styled from 'styled-components'
 
 export const Container = styled.section`
     display: flex;
-    flex-direction: column;
+    padding: .4rem .8rem .4rem 0;
     justify-content: center;
-    width: 100%;
+    align-items: center;
+    max-height: 32rem;
+    overflow: hidden;
+    color: ${props => props.theme.colors.textDark};
 `
 export const TextContainer = styled.div`
-    display: flex;
-    height: 100%;
-
     h2{
+        margin-top: 1rem;
         text-align: center;
-        color: ${props => props.theme.colors.textDark};
-        margin: 1rem .4rem;
+        font-weight: bold;
+        padding-bottom: 2rem;
     }
 
-    div{
-        display: flex;
-        width: 100%;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    div p{
-        color: ${props => props.theme.colors.textDark};
+    p{
         text-align: justify;
-        padding: 1rem;
-        max-width: 80rem;
     }
 `
 
 export const Binary = styled.p`
-    height: auto;
+    padding: 0 .8rem 0 .4rem;
+    writing-mode: vertical-lr;
     text-align: justify;
     color: ${props => props.theme.colors.summer};
     font-weight: 600;
-    writing-mode: vertical-lr;
-    line-height: 100%;
-    padding: .5rem .2rem;
-    max-height: 420px;
+    line-height: 120%;
 `
