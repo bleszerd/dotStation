@@ -4,7 +4,7 @@ export const Container = styled.section`
     width: 100%;
     height: 100%;
     margin-top: -6rem;
-    padding-top: 7rem;
+    padding-top: 6rem;
     display: flex;
     justify-content: center;
     background: ${props => props.theme.colors.sand};
