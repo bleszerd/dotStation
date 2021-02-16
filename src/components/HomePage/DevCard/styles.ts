@@ -8,17 +8,30 @@ export const Container = styled.section`
     display: flex;
     justify-content: center;
     background: ${props => props.theme.colors.sand};
+
+    @media(min-width: 800px) {
+        margin-top: -20rem;
+    }
 `
 
 export const CardWrapper = styled.div`
     padding: .8rem 0;
-    width: 100%;
     padding: .5rem .5rem;
     display: flex;
+
+    @media(min-width: 800px) {
+        width: auto;
+        padding-bottom: 2rem;
+        margin: 0 auto;
+    }
+
 
     img{
         height: 20vh;
         border-radius: 1rem;
+        position: relative;
+        max-width: 180px;
+        max-height: 180px;
     }
 `
 
@@ -28,6 +41,11 @@ export const DevInfo = styled.div`
     padding-left: .4rem;
     width: 100%;
     color: ${props => props.theme.colors.textDark};
+
+    @media(min-width: 800px) {
+        justify-content: center;
+        align-items: center;
+    }
 
     h2{
         font-weight: 400;

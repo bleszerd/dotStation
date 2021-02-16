@@ -1,5 +1,5 @@
 import { Bar } from 'react-chartjs-2';
-import {Container, ChartWrapper, Hint} from './styles'
+import {Container, ChartWrapper, Hint, GraphText} from './styles'
 
 const data = {
     labels: ['Conhecimento (0 ~ 10)'],
@@ -99,6 +99,13 @@ export default function Charts() {
                     }}
                 />
             </ChartWrapper>
+            <GraphText>
+                <h2>A base é a chave para o sucesso.</h2>
+                <p>A técnologia evolui constantemente, independentemente se você está preparado ou não.</p>
+                <p>Ser um desenvolvedor é a cada dia aprender um pouco mais.</p>
+                <p>Frameworks são legais, mas a base deles é ainda mais interessante e reutilizável.</p>
+                <b>Não adianta ter um foguete e não saber dirigi-lo.</b>
+            </GraphText>
         </Container>
     )
 }

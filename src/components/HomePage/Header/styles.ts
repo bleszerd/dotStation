@@ -6,12 +6,21 @@ export const Container = styled.header`
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @media(min-width: 800px) {
+        justify-content: start;
+        padding: 0 2rem;
+    }
 `
 
 export const MenuContainer = styled.section`
     position: absolute;
     left: 1rem;
     margin-top: .6rem;
+
+    @media(min-width: 800px) {
+        display: none;
+    }
 
     svg{
         color: ${props => props.theme.colors.text};

@@ -4,7 +4,7 @@ export const Container = styled.div`
     background: ${props => props.theme.colors.textDark};
     text-align: center;
     padding: 1rem 0;
-
+    
     h2{
         margin-bottom: 1rem;
         color: ${props => props.theme.colors.text};
@@ -13,13 +13,28 @@ export const Container = styled.div`
 
 export const ProjectsContainer = styled.div`
     max-width: 100%;
-    overflow-x: scroll;
+    overflow-x: auto;
+
+    @media(min-width: 800px) {
+        width: 100%;
+    }
 `
 
 export const ProjectList = styled.ul`
-    width: 200vw;
+    width: 500%;
     height: 20rem;
     display: flex;
+
+    @media(min-width: 800px) {
+        padding: .4rem;
+        max-width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: repeat(1fr);
+        grid-row-gap: .5rem;
+        grid-column-gap: .5rem;
+    }
 `
 
 export const ProjectCard = styled.li`
@@ -27,6 +42,13 @@ export const ProjectCard = styled.li`
     display: flex;
     border-radius: 1rem;
     margin: .4rem;
+
+    @media(min-width: 800px) {
+        width: 100%;
+        height: 20rem;
+        margin: 0 auto;
+        border-radius: .3rem;
+    }
 `
 
 export const Image = styled.div`
@@ -36,6 +58,10 @@ export const Image = styled.div`
     background-image: url("https://growth-train.dk/wp-content/uploads/2019/05/growthtrain_fbprofileNEW.jpg");
     width: 100%;
     border-radius: 1rem;
+
+    @media(min-width: 800px) {
+        border-radius: .3rem;
+    }
 `
 
 export const ProjectInfo = styled.div`
@@ -49,4 +75,7 @@ export const ProjectInfo = styled.div`
     padding: 1rem;
     color: ${props => props.theme.colors.text};
     text-shadow: 1px 1px 0 ${props => props.theme.colors.textDark};
+    @media(min-width: 800px) {
+        border-radius: .3rem;
+    }
 `
