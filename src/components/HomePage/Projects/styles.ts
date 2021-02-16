@@ -25,8 +25,8 @@ export const ProjectList = styled.ul`
 export const ProjectCard = styled.li`
     width: 100vw;
     display: flex;
-    padding: .4rem;
     border-radius: 1rem;
+    margin: .4rem;
 `
 
 export const Image = styled.div`
@@ -35,24 +35,18 @@ export const Image = styled.div`
     background-repeat: no-repeat;
     background-image: url("https://growth-train.dk/wp-content/uploads/2019/05/growthtrain_fbprofileNEW.jpg");
     width: 100%;
-    padding: 1rem;
+    border-radius: 1rem;
+`
+
+export const ProjectInfo = styled.div`
+    background-color: rgba(0, 0, 0, .4);
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center;
-    padding: .4rem;
-    border-radius: 1rem;
-
-    h2{
-        color: ${props => props.theme.colors.text};
-        z-index: 10;
-        text-shadow: 1px 1px black;
-        margin: initial;
-    }
-
-    p{
-        color: ${props => props.theme.colors.text};
-        z-index: 10;
-        text-shadow: 1px 1px black;
-    }
+    padding: 1rem;
+    color: ${props => props.theme.colors.text};
+    text-shadow: 1px 1px 0 ${props => props.theme.colors.textDark};
 `

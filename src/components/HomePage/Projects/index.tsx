@@ -1,4 +1,4 @@
-import { Container, ProjectsContainer, ProjectList, ProjectCard, Image } from './styles'
+import { Container, ProjectsContainer, ProjectInfo, ProjectList, ProjectCard, Image } from './styles'
 
 export default function Projects() {
     return (
@@ -8,14 +8,18 @@ export default function Projects() {
                 <ProjectList>
                     <ProjectCard>
                         <Image>
-                            <h2>dotStation</h2>
-                            <p>Portifólio com blog integrado</p>
+                            <ProjectInfo>
+                                <h2>dotStation</h2>
+                                <p>Portifólio com blog integrado</p>
+                            </ProjectInfo>
                         </Image>
                     </ProjectCard>
                     <ProjectCard>
                         <Image>
-                            <h2>dotStation</h2>
-                            <p>Portifólio com blog integrado</p>
+                            <ProjectInfo>
+                                <h2>dotStation</h2>
+                                <p>Portifólio com blog integrado</p>
+                            </ProjectInfo>
                         </Image>
                     </ProjectCard>
                 </ProjectList>
