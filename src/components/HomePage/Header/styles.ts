@@ -10,6 +10,7 @@ export const Container = styled.header`
     @media(min-width: 800px) {
         justify-content: start;
         padding: 0 2rem;
+        justify-content: space-between;
     }
 `
 
@@ -31,8 +32,34 @@ export const MenuContainer = styled.section<IStyledMenuContainer>`
 `
 
 export const LogoContainer = styled.section`
-    h2{
+    a{
+        text-decoration: none;
+
+        h2{
+            color: ${props => props.theme.colors.text};
+            font-size: 2rem;
+        }
+    }
+`
+
+export const LogoMenuWrapper = styled.section`
+    display: flex;
+    justify-content: center;
+`
+
+export const ButtonsWrapper = styled.section`
+    display: none;
+    width: 100%;
+    justify-content: flex-end;
+
+    a{
         color: ${props => props.theme.colors.text};
-        font-size: 2rem;
+        padding: 0 1rem;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    @media(min-width: 800px) {
+        display: flex;
     }
 `
