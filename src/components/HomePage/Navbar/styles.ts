@@ -47,7 +47,8 @@ export const Copy = styled.div`
     position: absolute;
     bottom: 6rem;
     text-align: center;
-    width: 100vw;
+    width: 98vw;
+    margin: auto auto;
 
     small{
         color: ${props => props.theme.colors.text};
