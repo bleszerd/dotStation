@@ -1,5 +1,5 @@
 import { BsFillGrid3X3GapFill } from 'react-icons/bs'
-import { Container, MenuContainer, LogoContainer } from './styles'
+import { Container, MenuContainer, LogoContainer, LogoMenuWrapper, ButtonsWrapper } from './styles'
 import { useNavbar } from '../../../context/navbar'
 
 export default function Header() {
@@ -7,12 +7,20 @@ export default function Header() {
 
     return (
         <Container>
-            <MenuContainer onClick={navController.handleStatus} active={navbar.opened}>
-                <BsFillGrid3X3GapFill />
-            </MenuContainer>
-            <LogoContainer>
-                <h2>dotStation</h2>
-            </LogoContainer>
+            <LogoMenuWrapper>
+                <MenuContainer onClick={navController.handleStatus} active={navbar.opened}>
+                    <BsFillGrid3X3GapFill />
+                </MenuContainer>
+                <LogoContainer>
+                    <a href="/">
+                        <h2>dotStation</h2>
+                    </a>
+                </LogoContainer>
+            </LogoMenuWrapper>
+            <ButtonsWrapper>
+                <a href="/">Início</a>
+                <a href="/blog">Blog</a>
+            </ButtonsWrapper>
         </Container>
     )
 }
