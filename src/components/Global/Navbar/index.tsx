@@ -1,4 +1,4 @@
-import Header from '../Header'
+import Header from '../../HomePage/Header'
 import { Container, Button, ButtonsArea, Copy } from './styles'
 import { ImHome3, ImParagraphLeft } from 'react-icons/im'
 import {useNavbar} from '../../../context/navbar'
