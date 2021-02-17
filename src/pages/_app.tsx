@@ -1,5 +1,6 @@
 import 'styled-components';
 import { createGlobalStyle, DefaultTheme, ThemeProvider } from 'styled-components'
+import NavbarProvider from '../context/navbar'
 
 //Themes
 const theme: DefaultTheme = {
@@ -35,10 +36,12 @@ const GlobalStyle = createGlobalStyle`
 export default function App({ Component, pageProps }) {
   return (
     <>
-      <GlobalStyle />
-      <ThemeProvider theme={theme}>
-        <Component {...pageProps} />
-      </ThemeProvider>
+      <NavbarProvider>
+        <GlobalStyle />
+        <ThemeProvider theme={theme}>
+          <Component {...pageProps} />
+        </ThemeProvider>
+      </NavbarProvider>
     </>
   )
 }
