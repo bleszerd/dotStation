@@ -8,7 +8,8 @@ interface IProjectCardProps {
 
 interface IPostCardProps {
     title: string
-    href: string
+    id: string
+    image: string
     metadata: IMetadata
 }
 
@@ -19,4 +20,8 @@ interface IStyledNavbarContainer {
 
 interface IStyledMenuContainer {
     active: boolean
+}
+
+interface IStyledPostCardImage {
+    image: string
 }

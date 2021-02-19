@@ -18,7 +18,7 @@ export default function PageNavigator() {
                 </li>
                 <p>...</p>
                 <li>
-                    <a>=45</a>
+                    <a>45</a>
                 </li>
                 <li>
                     <a>=&#62;</a>

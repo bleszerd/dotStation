@@ -1,5 +1,10 @@
 import styled from "styled-components";
 
+export const ContainerLink = styled.a`
+    text-decoration: none;
+    color: ${props => props.theme.colors.text};
+`
+
 export const Container = styled.ul`
     width: 96%;
     margin: 0 auto 1rem auto;
