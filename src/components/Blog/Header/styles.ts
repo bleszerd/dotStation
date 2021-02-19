@@ -40,13 +40,16 @@ export const MenuContainer = styled.section<IStyledMenuContainer>`
 `
 
 export const LogoContainer = styled.section`
+`
+export const Logo = styled.div`
+
     a{
         text-decoration: none;
-
-        h2{
-            color: ${props => props.theme.colors.text};
-            font-size: 2rem;
-        }
+        font-weight: bold;
+        color: ${props => props.theme.colors.text};
+        font-size: 2rem;
+        width: 100%;
+        height: 100%;
     }
 `
 
@@ -55,8 +58,9 @@ export const ButtonsWrapper = styled.section`
     right: 1rem;
     position: absolute;
     display: none;
-    width: 100%;
+    width: 50%;
     justify-content: flex-end;
+    z-index: 0;
 
     a{
         color: ${props => props.theme.colors.text};

@@ -1,6 +1,6 @@
 /* Inside components */
 interface IMetadata {
-    id: string
+    author: string
     date: string
 }
 
