@@ -1,11 +1,11 @@
 import styled from "styled-components"
 
-export const Container = styled.li`
+export const Container = styled.li<IStyledPostCardImage>`
     list-style: none;
     margin: 0 auto;
     width: 100%;
     height: 17rem; 
-    background-image: url("https://ewscripps.brightspotcdn.com/77/a9/3fa549834149b88da33239946e4e/zoo-giraffe.jpg");
+    background-image: url(${props => props.image});
     background-position: center;
     background-size: cover;
 `
