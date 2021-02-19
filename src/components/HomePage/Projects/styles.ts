@@ -11,6 +11,19 @@ export const Container = styled.div`
     }
 `
 
+export const SubContainer = styled.div`
+    width: 100%;
+    margin: 0 auto;
+
+    @media(min-width: 800px) {
+        width: 90%;
+    }
+
+    @media(min-width: 1280px) {
+        width: 70%;
+    }
+`
+
 export const ProjectsContainer = styled.div`
     max-width: 100%;
     overflow-x: auto;

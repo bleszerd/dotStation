@@ -14,4 +14,14 @@ export const Container = styled.ul`
     grid-template-columns: 1fr;
     grid-auto-rows: repeat(1fr);
     grid-row-gap: .7rem;
+
+    @media(min-width: 670px) {
+        grid-column-gap: .5rem;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    @media(min-width: 1050px) {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column-gap: .5rem;
+    }
 `

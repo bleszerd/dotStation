@@ -1,8 +1,8 @@
 import { Container, OverlayAndInfo } from './styles'
 
-export default function PostCard({title, id, metadata, image}: IPostCardProps) {
+export default function PostCard({ title, id, metadata, image }: IPostCardProps) {
     return (
-        <Container image={image}>
+        <Container image={image} key={id}>
             <OverlayAndInfo>
                 <h2>{title}</h2>
                 <p>por <a href="https://twitter.com/bleszerd/">Vinícius Resende</a>, {metadata.date}.</p>

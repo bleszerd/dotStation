@@ -1,14 +1,18 @@
-import {Slug} from '../../helpers/slug'
+import { Slug } from '../../helpers/slug'
 import API from '../../API'
+import Header from '../../components/Blog/Header'
+import PostContent from '../../components/Blog/PostContent'
+import Footer from '../../components/Global/Footer'
 
-export default function PostPage({post}) {
+export default function PostPage({ post }) {
     return (
-        <div>
-            <p>{post._id}</p>
-            <p>{post.title}</p>
-            <p>{post.author}</p>
-            <p>{post.content}</p>
-        </div>
+        <>
+            <title>{post.title} - dotStation</title>
+
+            <Header />
+            <PostContent post={post}/>
+            <Footer />
+        </>
     )
 }
 

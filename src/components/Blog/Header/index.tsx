@@ -1,20 +1,22 @@
 import { BsFillGrid3X3GapFill } from 'react-icons/bs'
-import { Container, MenuContainer, LogoContainer, LogoMenuWrapper, ButtonsWrapper } from './styles'
+import { Container, MenuContainer, Logo, LogoContainer, LogoMenuWrapper, ButtonsWrapper } from './styles'
 import { useNavbar } from '../../../context/navbar'
+import Navbar from '../../Global/Navbar'
 
 export default function Header() {
     const { navbar, navController } = useNavbar()
 
     return (
         <Container>
+            <Navbar />
             <LogoMenuWrapper>
                 <MenuContainer onClick={navController.handleStatus} active={navbar.opened}>
                     <BsFillGrid3X3GapFill />
                 </MenuContainer>
                 <LogoContainer>
-                    <a href="/">
-                        <h2>dotStation</h2>
-                    </a>
+                    <Logo>
+                        <a href="/blog">dotStation</a>
+                    </Logo>
                 </LogoContainer>
             </LogoMenuWrapper>
             <ButtonsWrapper>

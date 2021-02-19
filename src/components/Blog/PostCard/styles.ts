@@ -8,6 +8,9 @@ export const Container = styled.li<IStyledPostCardImage>`
     background-image: url(${props => props.image});
     background-position: center;
     background-size: cover;
+    border-radius: .25rem;
+    max-width: 100%;
+    max-height: 17rem;
 `
 
 export const OverlayAndInfo = styled.a`
@@ -21,6 +24,7 @@ export const OverlayAndInfo = styled.a`
     height: 100%;
     background: rgba(0, 0, 0, .5);
     transition: background .1s ease-in;
+    border-radius: .25rem;
 
     :hover{
         background: rgba(0, 0, 0, .2);
@@ -31,6 +35,8 @@ export const OverlayAndInfo = styled.a`
         color: ${props => props.theme.colors.text};
         text-shadow: 1px 1px 1px black;
         padding: .5rem 0;
+        max-height: 17rem;
+        overflow: auto;
     }
 
     //metadata
@@ -38,6 +44,7 @@ export const OverlayAndInfo = styled.a`
         font-size: .8rem;
         color: ${props => props.theme.colors.text};
         text-shadow: 1px 1px 1px black;
+        text-align: right;
 
         a{
             color: ${props => props.theme.colors.text};

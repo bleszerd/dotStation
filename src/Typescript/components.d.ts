@@ -25,3 +25,7 @@ interface IStyledMenuContainer {
 interface IStyledPostCardImage {
     image: string
 }
+
+interface IStyledPostHeaderImage {
+    image: string
+}
