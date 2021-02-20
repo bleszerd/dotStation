@@ -1,6 +1,7 @@
 import DBConnect from '../connection'
 import mongoose from 'mongoose'
 import { IPostDocument } from '../../Typescript/database'
+import { timeStamp } from 'console'
 
 const PostSchema = new mongoose.Schema({
     title: {
@@ -23,6 +24,6 @@ const PostSchema = new mongoose.Schema({
         type: String,
         required: [true, "unset"]
     }
-})
+}, { timestamps: true })
 
 export default mongoose.models.Post || mongoose.model<IPostDocument | any>('Post', PostSchema, 'Posts')
