@@ -1,7 +1,6 @@
 import DBConnect from '../connection'
 import mongoose from 'mongoose'
 import { IPostDocument } from '../../Typescript/database'
-import { timeStamp } from 'console'
 
 const PostSchema = new mongoose.Schema({
     title: {
