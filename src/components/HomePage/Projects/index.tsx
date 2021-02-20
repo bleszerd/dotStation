@@ -1,58 +1,34 @@
-import { Container, SubContainer, ProjectsContainer, ProjectInfo, ProjectList, ProjectCard, Image } from './styles'
+import { Container, SubContainer, ProjectsContainer, ProjectList } from './styles'
+import ProjectCard from '../ProjectCard'
+
+//ProjectsData hard code
+const projectsData = [
+    {
+        title: "Projeto #001",
+        image: "https://www.crushpixel.com/big-static14/preview4/test-tube-flask-with-blue-1672814.jpg",
+        description: "Aqui ficaria uma descrição do projeto vinculado a uma postagem no blog.",
+        blogURL: "/blog/Publicação_de_teste_-_%23001@602ff9255381042a551c1f1e"
+    },
+    {
+        title: "Projeto #002",
+        image: "https://image.shutterstock.com/z/stock-photo-test-tubes-and-erlenmeyer-flask-in-laboratory-228473260.jpg",
+        description: "Aqui ficaria uma descrição do projeto vinculado a uma postagem no blog.",
+        blogURL: "/blog/Publicação_de_teste_-__%23002@602ff9285381042a551c1f1f"
+    }
+]
 
 export default function Projects() {
     return (
         <Container>
             <SubContainer>
-            <h2>Projects</h2>
-            <ProjectsContainer>
-                <ProjectList>
-                    <h2 style={{padding: '10rem 0', background: 'rgba(0, 0, 0, .3)', border: 'solid yellow 1px' ,borderRadius: '.25rem'}}>EM BREVE...</h2>
-                    <h2 style={{padding: '10rem 0', background: 'rgba(0, 0, 0, .3)', border: 'solid yellow 1px' ,borderRadius: '.25rem'}}>EM BREVE...</h2>
-                    <h2 style={{padding: '10rem 0', background: 'rgba(0, 0, 0, .3)', border: 'solid yellow 1px' ,borderRadius: '.25rem'}}>EM BREVE...</h2>
-                    <h2 style={{padding: '10rem 0', background: 'rgba(0, 0, 0, .3)', border: 'solid yellow 1px' ,borderRadius: '.25rem'}}>EM BREVE...</h2>
-                    {/* <ProjectCard>
-                        <Image>
-                            <ProjectInfo>
-                                <h2>dotStation</h2>
-                                <p>Portifólio com blog integrado</p>
-                            </ProjectInfo>
-                        </Image>
-                    </ProjectCard>
-                    <ProjectCard>
-                        <Image>
-                            <ProjectInfo>
-                                <h2>dotStation</h2>
-                                <p>Portifólio com blog integrado</p>
-                            </ProjectInfo>
-                        </Image>
-                    </ProjectCard>
-                    <ProjectCard>
-                        <Image>
-                            <ProjectInfo>
-                                <h2>dotStation</h2>
-                                <p>Portifólio com blog integrado</p>
-                            </ProjectInfo>
-                        </Image>
-                    </ProjectCard>
-                    <ProjectCard>
-                        <Image>
-                            <ProjectInfo>
-                                <h2>dotStation</h2>
-                                <p>Portifólio com blog integrado</p>
-                            </ProjectInfo>
-                        </Image>
-                    </ProjectCard>
-                    <ProjectCard>
-                        <Image>
-                            <ProjectInfo>
-                                <h2>dotStation</h2>
-                                <p>Portifólio com blog integrado</p>
-                            </ProjectInfo>
-                        </Image>
-                    </ProjectCard> */}
-                </ProjectList>
-            </ProjectsContainer>
+                <h2>Projects</h2>
+                <ProjectsContainer>
+                    <ProjectList projectCount={projectsData.length}>
+                        {projectsData.map(project => (
+                            <ProjectCard project={project}/>
+                        ))}
+                    </ProjectList>
+                </ProjectsContainer>
             </SubContainer>
         </Container>
     )
