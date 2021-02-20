@@ -25,7 +25,7 @@ export default function Projects() {
                 <ProjectsContainer>
                     <ProjectList projectCount={projectsData.length}>
                         {projectsData.map(project => (
-                            <ProjectCard project={project}/>
+                            <ProjectCard project={project} key={project.blogURL}/>
                         ))}
                     </ProjectList>
                 </ProjectsContainer>

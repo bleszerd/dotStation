@@ -1,5 +1,6 @@
 import DBConnect from '../connection'
-import mongoose from 'mongoose'
+import mongoose, { Model } from 'mongoose'
+import {mongoosePagination, Pagination} from 'mongoose-paginate-ts'
 import { IPostDocument } from '../../Typescript/database'
 
 const PostSchema = new mongoose.Schema({
@@ -25,4 +26,11 @@ const PostSchema = new mongoose.Schema({
     }
 }, { timestamps: true })
 
-export default mongoose.models.Post || mongoose.model<IPostDocument | any>('Post', PostSchema, 'Posts')
+PostSchema.plugin(mongoosePagination)
+
+const Post: any | Pagination<IPostDocument> = mongoose.models.Post || mongoose.model<IPostDocument, Pagination<IPostDocument>>('Post', PostSchema, 'Posts')
+
+/*
+mongoose.models.Post || mongoose.model<IPostDocument | any>('Post', PostSchema, 'Posts')
+*/
+export default Post

@@ -1,28 +1,23 @@
 import { NextApiRequest, NextApiResponse } from 'next'
 import '../../../../database/connection'
-import Post from '../../../../database/Schemas/Post'
+import Post from '../../../../database/models/Post'
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
-    function calcPagination(numOfPosts: number) {
-        let pageOffset = 0;
-
-        while (numOfPosts > 10) {
-            pageOffset++;
-            numOfPosts -= 10;
-        }
-
-        return pageOffset
-    }
-
     try {
         if (req.method == 'GET') {
-            const response = await Post.find().limit(100).sort([['createdAt', 'descending']])
+            const page = String(req.query.page || 1)
+            const limit = String(req.query.limit || 10)
+
+            const response = await Post.paginate({
+                query: {},
+                limit,
+                page
+            })
 
             res.json({
-                pageCount: calcPagination(response.length),
                 type: 'Response',
                 message: 'Post recovered',
-                responseData: response
+                responseData: response,
             })
 
             return
