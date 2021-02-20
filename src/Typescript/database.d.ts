@@ -7,3 +7,4 @@ interface IPostDocument extends Document {
     date: string
     content: string
 }
+
