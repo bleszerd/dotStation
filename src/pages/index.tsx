@@ -4,7 +4,7 @@ import MainContent from '../components/HomePage/MainContent'
 import Footer from '../components/Global/Footer'
 import Navbar from '../components/Global/Navbar'
 
-export default function Home() {
+export default function Home(props) {
   return (
     <>
       <title>dotStation - Início</title>

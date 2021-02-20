@@ -29,3 +29,11 @@ interface IStyledPostCardImage {
 interface IStyledPostHeaderImage {
     image: string
 }
+
+interface IStyledProjectList {
+    projectCount: number
+}
+
+interface IStyledProjectImageContainer {
+    image: string
+}
