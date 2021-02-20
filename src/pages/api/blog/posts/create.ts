@@ -1,6 +1,6 @@
 import { NextApiRequest, NextApiResponse } from 'next'
 import '../../../../database/connection'
-import Post from '../../../../database/Schemas/Post'
+import Post from '../../../../database/models/Post'
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
     try {

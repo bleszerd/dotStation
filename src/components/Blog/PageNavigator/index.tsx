@@ -1,29 +1,54 @@
 import { Container, NavigatorWrapper } from './styles'
+import {HiArrowNarrowRight, HiArrowNarrowLeft} from 'react-icons/hi'
 
-export default function PageNavigator() {
+export default function PageNavigator({ pagination }) {
+    function calcPages(totalPages) {
+        let pagesArray = []
+
+        for (let i = 1; i <= totalPages; i++) {
+            pagesArray.push(i)
+        }
+
+        return pagesArray
+    }
+
+    const navigatePostArray = calcPages(pagination.totalPages)
+    const pageNavigator = {
+        next: Number(pagination.page) + 1,
+        previous: Number(pagination.page) - 1
+    }
+
     return (
         <Container>
             <NavigatorWrapper>
-                <li>
-                    <a>&#60;=</a>
-                </li>
-                <li>
-                    <a>1</a>
-                </li>
-                <li>
-                    <a>2</a>
-                </li>
-                <li>
-                    <a>3</a>
-                </li>
-                <p>...</p>
-                <li>
-                    <a>45</a>
-                </li>
-                <li>
-                    <a>=&#62;</a>
-                </li>
+                {
+                    pagination.page > 1
+                    &&
+                    <li>
+                        <a href={`/blog/?page=${pageNavigator.previous}`}>
+                            <HiArrowNarrowLeft />
+                        </a>
+                    </li>
+                }
+                {
+                    navigatePostArray.map(page => (
+                        <li key={page}>
+                            <a href={`/blog/?page=${page}`}>{page}</a>
+                        </li>
+                    ))
+                }
+                {
+                    pagination.page != pagination.totalPages
+                    &&
+                    <li >
+                        <a href={`/blog/?page=${pageNavigator.next}`}>
+                            <HiArrowNarrowRight />
+                        </a>
+                    </li>
+                }
             </NavigatorWrapper>
         </Container>
     )
 }
+
+//{totalDocs: 2, totalPages: 1, page: 1, pagingCounter: 1}

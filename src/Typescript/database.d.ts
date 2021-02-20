@@ -1,4 +1,4 @@
-import { Document } from 'mongoose'
+import { Document, Model } from 'mongoose'
 
 interface IPostDocument extends Document {
     title: string
@@ -7,4 +7,3 @@ interface IPostDocument extends Document {
     date: string
     content: string
 }
-
